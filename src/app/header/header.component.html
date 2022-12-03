@@ -1,0 +1,158 @@
+<div data-elementor-type="wp-post" data-elementor-id="398" class="elementor elementor-398">
+  <section
+    class="elementor-section elementor-top-section elementor-element elementor-element-299ff61 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+    data-id="299ff61" data-element_type="section">
+    <div class="elementor-container elementor-column-gap-no">
+      <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0cb0e7d"
+        data-id="0cb0e7d" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+          <div class="elementor-element elementor-element-b2ca3f2 elementor-widget elementor-widget-wostin-header"
+            data-id="b2ca3f2" data-element_type="widget" data-widget_type="wostin-header.default">
+            <div class="elementor-widget-container">
+
+              <header class="main-header clearfix">
+                <div class="main-header__inner clearfix">
+                  <div class="main-header__logo">
+                    <a href="#" routerLinkActive="router-link-active"><img loading="lazy" width="183" height="41"
+                        src="assets/images/logo2.png" id="thm-logo" alt="Wostin"></a>
+                  </div>
+                  <div class="main-menu__menu-box">
+                    <div class="main-menu__menu-bottom">
+                      <nav class="main-menu clearfix">
+                        <div class="main-menu__main-menu-box">
+                          <a href="#" class="mobile-nav__toggler">
+                            <fa-icon [icon]="faBars"></fa-icon>
+                          </a>
+                          <div class="menu-main-menu-container">
+                            <ul id="menu-main-menu" class="main-menu__list  ">
+                              <li id="menu-item-111"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-114">
+                                <a href="" routerLinkActive="router-link-active">Home</a>
+                              </li>
+                              <li id="menu-item-113"
+                                class="menu-item menu-item-type-post_type menu-item-object-page megamenu megamenu-style-alt menu-item-has-children menu-item-113">
+                                <a href="#service">Our Services</a>
+                              </li>
+                              <li id="menu-item-121"
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-121">
+                                <a href="#team">Team</a>
+                              </li>
+                              <li id="menu-item-112"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-112">
+                                <a href="aboutus" routerLinkActive="router-link-active">About Us</a>
+                              </li>
+                              <li id="menu-item-121"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-114">
+                                <a href="contactus">Contact Us</a>
+                              </li>
+                              <li *ngIf="isLoggedIn" id="menu-item-114"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-114">
+                                <a href="appointment">Appointment</a>
+                              </li>
+                              <li *ngIf="isLoggedIn" id="menu-item-131"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-131">
+                                <a href="profile">Profile</a>
+                              </li>
+                              <li *ngIf="isCompanyLoginIn" id="menu-item-114"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-114">
+                                <a href="companyappointment">Appointment</a>
+                              </li>
+                              <li *ngIf="isCompanyLoginIn" id="menu-item-131"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-131">
+                                <a href="companyprofile">Profile</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                    </div>
+                  </div>
+                  <div class="main-header__right">
+                    <div class="main-header__right__call-icon icon-svg">
+                      <span aria-hidden="true">
+                        <fa-icon [icon]="faLock"></fa-icon>
+                      </span>
+                    </div>
+                    <div class="main-header__right-call-number">
+                      <h5><a *ngIf="!isLoggedIn && !isCompanyLoginIn" [routerLink]="['/login']"
+                          routerLinkActive="router-link-active">Login/Register?</a></h5>
+                      <h5><a *ngIf="isLoggedIn || isCompanyLoginIn" (click)="logout()" href=""
+                          routerLinkActive="router-link-active">Logout</a></h5>
+                    </div>
+                  </div>
+                </div>
+              </header>
+              <div class="stricky-header stricked-menu main-menu">
+                <div class="sticky-header__content"></div>
+              </div>
+              <div class="mobile-nav__wrapper">
+                <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+                <div class="mobile-nav__content">
+                  <span class="mobile-nav__close mobile-nav__toggler"></span>
+                  <div class="logo-box">
+                    <a href="https://layerdrops.com/wostinwp/">
+                      <img loading="lazy" width="183" height="41" src="assets/images/logo2.png" id="mobile-thm-logo"
+                        alt="Wostin">
+                    </a>
+                  </div>
+                  <div>
+                    <div class="menu-main-menu-container">
+                      <ul id="menu-main-menu" class="main-menu__list  ">
+                        <li id="menu-item-111"
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-114">
+                          <a href="" routerLinkActive="router-link-active">Home</a>
+                        </li>
+                        <li id="menu-item-113"
+                          class="menu-item menu-item-type-post_type menu-item-object-page megamenu megamenu-style-alt menu-item-has-children menu-item-113">
+                          <a href="#service">Our Services</a>
+                        </li>
+                        <li id="menu-item-121"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-121">
+                          <a href="#team">Team</a>
+                        </li>
+                        <li id="menu-item-112"
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-112">
+                          <a href="aboutus" routerLinkActive="router-link-active">About Us</a>
+                        </li>
+                        <li id="menu-item-121"
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-114">
+                          <a href="contactus">Contact Us</a>
+                        </li>
+                        <li *ngIf="isLoggedIn" id="menu-item-114"
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-114">
+                          <a href="appointment">Appointment</a>
+                        </li>
+                        <li *ngIf="isLoggedIn" id="menu-item-131"
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-131">
+                          <a href="profile">Profile</a>
+                        </li>
+                        <li *ngIf="isCompanyLoginIn" id="menu-item-114"
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-114">
+                          <a href="companyappointment">Appointment</a>
+                        </li>
+                        <li *ngIf="isCompanyLoginIn" id="menu-item-131"
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-131">
+                          <a href="companyprofile">Profile</a>
+                        </li>
+
+                        <li id="menu-item-131" *ngIf="!isLoggedIn && !isCompanyLoginIn"
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-131">
+                          <a [routerLink]="['/login']" routerLinkActive="router-link-active">Login/Register?</a>
+                        </li>
+                        <li id="menu-item-131" *ngIf="isLoggedIn || isCompanyLoginIn"
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-131">
+                          <a (click)="logout()" href="" routerLinkActive="router-link-active">Logout</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- <div class="mobile-nav__container"></div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

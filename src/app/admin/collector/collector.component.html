@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row row--top-40">
+    <div class="col-md-12">
+      <p style="font-size: 25px;">
+        <b> Collector </b>
+      </p>
+    </div>
+    <div class="col-md-12">
+      <p align="right">
+        <a [routerLink]="['/admin/addcollector']" routerLinkActive="router-link-active">
+          <button type="button" class="btn btn-primary">Add collector</button>
+        </a>
+      </p>
+    </div>
+  </div>
+  <div class="row row--top-20">
+    <div class="col-md-12">
+      <div class="table-container">
+        <table *ngIf="listUsers" class="table">
+          <thead class="table__thead">
+            <tr>
+              <th class="table__th"><b> Name</b></th>
+              <th class="table__th"><b>Email</b></th>
+              <th class="table__th"><b>Gender</b></th>
+              <th class="table__th"><b>DOB</b></th>
+              <th class="table__th"><b>Contact</b></th>
+              <th class="table__th"><b>Role</b></th>
+              <!-- <th class="table__th"></th> -->
+            </tr>
+          </thead>
+          <tbody class="table__tbody">
+            <tr class="table-row table-row--angie" *ngFor="let l of listUsers">
+
+              <td class="table-row__td">
+                <div class="table-row__info">
+                  <p class="table-row__name">{{l.name}}</p>
+                </div>
+              </td>
+              <td data-column="Policy" class="table-row__td">
+                <div class="">
+                  <p class="table-row__policy">{{l.email}}</p>
+                </div>
+              </td>
+              <td data-column="Policy Status" class="table-row__td">
+                <p class="table-row__p-status ">{{l.gender}}</p>
+              </td>
+              <td data-column="Policy" class="table-row__td">
+                <p class="table-row__p-status "> {{l.dateOfBirth | date: "mediumDate"}}</p>
+              </td>
+              <td data-column="Status" class="table-row__td">
+                <p class="table-row__status">{{l.contact}}</p>
+              </td>
+              <td data-column="Progress" class="table-row__td">
+                <p class="table-row__progress">{{l.role}}</p>
+              </td>
+
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

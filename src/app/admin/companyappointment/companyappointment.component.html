@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="row row--top-40">
+    <div class="col-md-12">
+      <p style="font-size: 25px;">
+        <b> Company Appointment </b>
+      </p>
+    </div>
+  </div>
+  <div class="row row--top-20">
+    <div class="col-md-12">
+      <div class="table-container">
+        <table class="table">
+          <thead class="table__thead">
+            <tr>
+              <th class="table__th"> <b> Name</b></th>
+              <th class="table__th"><b>Date</b></th>
+              <th class="table__th"><b>Weight</b></th>
+              <th class="table__th"><b>Status</b></th>
+              <th class="table__th"></th>
+            </tr>
+          </thead>
+          <tbody class="table__tbody">
+            <tr class="table-row table-row--angie" *ngFor="let l of listAppointment">
+
+              <td class="table-row__td">
+                <div class="table-row__info">
+                  <p class="table-row__name">{{l.userId.name}}</p>
+                </div>
+              </td>
+              <td data-column="Policy" class="table-row__td">
+                <div class="">
+                  <p class="table-row__policy">{{l.date | date: "mediumDate" }}</p>
+                </div>
+              </td>
+              <td data-column="Policy Status" class="table-row__td">
+                <p class="table-row__p-status">{{l.weight}}</p>
+              </td>
+
+
+
+              <td data-column="Status" class="table-row__td">
+                <p *ngIf="l.status == 0">
+                  <span>
+                    <a class="btn btn-sm btn-lg" (click)="accept(l)"
+                      style="color: white; background-color: rgb(83, 201, 83); ">
+                      Accept
+                    </a> &nbsp;&nbsp;
+                    <a class="btn btn-sm btn-lg" (click)="reject(l)" style="color: white; background-color: red; ">
+                      Reject
+                    </a>
+                  </span>
+                </p>
+
+                <p *ngIf="l.status == 1">
+                  <a class="btn btn-sm btn-lg disabled" style="color: white; background-color: rgb(51, 179, 51); ">
+                    Accepted
+                  </a>
+                </p>
+                <p *ngIf="l.status == 2">
+                  <a class="btn btn-sm btn-lg disabled" style="color: white; background-color: red; ">
+                    Rejected
+                  </a>
+                </p>
+              </td>
+
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="margin-top: 107px;"></div>
